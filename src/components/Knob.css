@@ -1,0 +1,46 @@
+.knob {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.knob__ring {
+  position: relative;
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.knob__cap {
+  position: absolute;
+  inset: 6px;
+  display: block;
+  border-radius: 50%;
+  background: var(--control);
+  border: 1px solid var(--border-strong);
+  transform: rotate(var(--rot));
+}
+
+.knob__pointer {
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  display: block;
+  width: 3px;
+  height: 12px;
+  margin-left: -1.5px;
+  border-radius: 2px;
+  background: var(--text-bright);
+}
+
+.knob__input {
+  position: absolute;
+  inset: 0 -14px;
+  width: 80px;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+}

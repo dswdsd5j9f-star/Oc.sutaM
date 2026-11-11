@@ -1,0 +1,67 @@
+:root {
+  /* Surfaces */
+  --bg: #15171a;
+  --panel: #1e2126;
+  --panel-raised: #22262c;
+  --control: #2a2e35;
+  --well: #0d0f11;
+  --border: #2c3038;
+  --border-strong: #3a3f48;
+  --tick: #565c68;
+  --knob-track: #343944;
+
+  /* Text */
+  --text: #e8eaed;
+  --text-soft: #c9ced6;
+  --text-muted: #9aa1ab;
+  --text-bright: #f2f4f7;
+
+  /* Signal */
+  --accent: #ffc53d;
+  --danger: #ff6b6b;
+  --meter-low: #6edc8c;
+  --meter-mid: #ffc53d;
+  --meter-high: #ff6b6b;
+
+  --strip-height: 240px;
+
+  --sans: 'Space Grotesk', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  color-scheme: dark;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+.mono {
+  font-family: var(--mono);
+  font-weight: 500;
+}
+
+.caption {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+a { color: var(--text-soft); }
+a:hover { color: var(--text-bright); }
+
+button:focus-visible {
+  outline: 2px solid var(--text-bright);
+  outline-offset: 2px;
+}
+
+label:focus-within {
+  outline: 2px solid var(--text-bright);
+  outline-offset: 3px;
+  border-radius: 8px;
+}

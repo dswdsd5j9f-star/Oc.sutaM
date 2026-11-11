@@ -1,0 +1,80 @@
+.fader {
+  --fader-w: 56px;
+  --cap-w: 40px;
+  --cap-bg: var(--border-strong);
+  --cap-border: var(--tick);
+  position: relative;
+  display: block;
+  width: var(--fader-w);
+  height: var(--strip-height);
+}
+
+.fader--master {
+  --fader-w: 64px;
+  --cap-w: 48px;
+  --cap-bg: #454b56;
+  --cap-border: #6a7180;
+}
+
+.fader__ticks {
+  position: absolute;
+  left: 4px;
+  top: 22px;
+  bottom: 22px;
+  display: block;
+  width: 8px;
+  background-image: repeating-linear-gradient(to bottom, var(--tick) 0 1px, transparent 1px 24.5px);
+}
+
+.fader__slot {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  display: block;
+  box-sizing: border-box;
+  width: 6px;
+  margin-left: -3px;
+  border-radius: 3px;
+  background: var(--well);
+  border: 1px solid var(--border);
+}
+
+.fader__cap {
+  position: absolute;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: var(--cap-w);
+  height: 44px;
+  margin-left: calc(var(--cap-w) / -2);
+  border-radius: 6px;
+  background: var(--cap-bg);
+  border: 1px solid var(--cap-border);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.fader__stripe {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  top: 50%;
+  display: block;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 2px;
+  background: var(--fader-color);
+}
+
+.fader__input {
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: var(--fader-w);
+  height: 212px;
+  margin: 0;
+  opacity: 0;
+  writing-mode: vertical-lr;
+  direction: rtl;
+  cursor: ns-resize;
+}

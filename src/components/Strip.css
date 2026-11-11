@@ -1,0 +1,151 @@
+.strip {
+  flex: 1 0 112px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 10px 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.strip--master {
+  flex: 1 1 200px;
+  padding: 14px 16px 16px;
+  background: var(--panel-raised);
+  border-color: var(--border-strong);
+}
+
+.strip__head {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.strip__swatch {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.strip__title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.strip__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.strip__num {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.strip__knobs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.strip__toggles {
+  align-self: stretch;
+  display: flex;
+  gap: 4px;
+}
+
+.strip__fader-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.readout {
+  align-self: stretch;
+  box-sizing: border-box;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text);
+}
+
+/* Mute / Solo */
+.toggle {
+  --on: var(--accent);
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
+  background: var(--control);
+  color: var(--text-soft);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toggle--danger {
+  --on: var(--danger);
+}
+
+.toggle[aria-pressed='true'] {
+  border-color: var(--on);
+  background: var(--on);
+  color: var(--bg);
+}
+
+/* Master */
+.master__stats {
+  align-self: stretch;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.master__stat {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.master__stat dd {
+  margin: 2px 0 0;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.master__help {
+  align-self: stretch;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.master__fader-row {
+  margin-top: auto;
+  gap: 10px;
+}
+
+.master__meters {
+  display: flex;
+  gap: 4px;
+}

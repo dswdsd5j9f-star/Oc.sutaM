@@ -1,0 +1,29 @@
+.console {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.console__body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.console__channels {
+  flex: 999 1 560px;
+  min-width: 0;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+@media (max-width: 480px) {
+  .console {
+    padding: 16px;
+  }
+}

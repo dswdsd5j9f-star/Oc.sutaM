@@ -1,0 +1,30 @@
+.meter {
+  position: relative;
+  display: block;
+  height: var(--strip-height);
+  border-radius: 3px;
+  background: var(--well);
+  overflow: hidden;
+}
+
+.meter__fill {
+  position: absolute;
+  inset: auto 0 0;
+  display: block;
+  background-image: linear-gradient(
+    to top,
+    var(--meter-low) 0 68%,
+    var(--meter-mid) 68% 90%,
+    var(--meter-high) 90% 100%
+  );
+  background-size: 100% var(--strip-height);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.meter__segments {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-image: repeating-linear-gradient(to bottom, var(--well) 0 2px, transparent 2px 12px);
+}

@@ -1,0 +1,122 @@
+.transport {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  padding: 14px 18px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.transport__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-right: auto;
+}
+
+.transport__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.transport__subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.transport__play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 124px;
+  height: 48px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.transport__tempo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.transport__bpm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 56px;
+}
+
+.transport__bpm-value {
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.icon-button {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--control);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.transport__steps {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  gap: 4px;
+  width: 284px;
+  max-width: 100%;
+}
+
+.transport__step {
+  display: block;
+  height: 14px;
+  border-radius: 3px;
+  background: var(--control);
+}
+
+.transport__step--beat {
+  background: var(--tick);
+}
+
+.transport__step--current {
+  background: var(--accent);
+}
+
+.transport__reset {
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-soft);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.transport__notice {
+  margin: 0;
+  flex-basis: 100%;
+  font-size: 13px;
+  color: var(--text-soft);
+}
